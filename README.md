@@ -7,7 +7,7 @@
 打开本项目的 [Releases](../../releases) 页面，选择最新版本：
 
 - `latex-format-palette.vsix`：在 VS Code 中选择“扩展 → … → 从 VSIX 安装”。
-- `LaTeX格式面板-便携安装包-v2.0.2.zip`：解压后双击 `双击安装.cmd`，适合发给不会技术操作的朋友。
+- `latex-format-palette-portable-v2.0.2.zip`：解压后双击 `双击安装.cmd`，适合发给不会技术操作的朋友。
 
 安装后重新打开 VS Code，在左侧活动栏点击“LaTeX 格式面板”图标即可使用。
 
