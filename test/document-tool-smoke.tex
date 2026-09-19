@@ -1,0 +1,29 @@
+% LaTeX 格式面板 1.0 文档工具编译测试
+\documentclass[UTF8,a4paper,12pt]{ctexart}
+\usepackage{amsmath,amssymb,graphicx,booktabs,float,tocloft,fancyhdr}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+
+\title{文档工具测试}
+\author{测试作者}
+\date{\today}
+\AtBeginDocument{\songti\fontsize{12pt}{18pt}\selectfont}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{文档工具测试}
+\fancyfoot[C]{\thepage}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+这是由文档工具生成结构的编译测试。
+
+\noindent\textbf{关键词：}文档；检查；修复
+\end{abstract}
+\tableofcontents
+\section{引言}
+正文和公式 $E=mc^2$。
+\begin{equation}
+  a^2+b^2=c^2
+\end{equation}
+\end{document}

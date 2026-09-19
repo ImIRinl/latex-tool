@@ -1,0 +1,29 @@
+\documentclass[UTF8]{ctexart}
+\begin{document}
+\begin{table}[htbp]
+  \caption[表格测试]{\protect\centering {\songti \fontsize{10.5pt}{12.6pt}\selectfont \bfseries 表格测试}}
+  \label{tab:test}
+  {
+  \centering
+  \begin{tabular}{|c|c|c|}
+    \hline
+    \multicolumn{1}{|c|}{{\heiti \fontsize{10.5pt}{12.6pt}\selectfont \bfseries 表头1}} &
+    \multicolumn{1}{c|}{{\heiti \fontsize{10.5pt}{12.6pt}\selectfont \bfseries 表头2}} &
+    \multicolumn{1}{c|}{{\heiti \fontsize{10.5pt}{12.6pt}\selectfont \bfseries 表头3}} \\
+    \hline
+    {\songti \fontsize{10.5pt}{12.6pt}\selectfont 内容1} &
+    {\songti \fontsize{10.5pt}{12.6pt}\selectfont 内容2} &
+    {\songti \fontsize{10.5pt}{12.6pt}\selectfont 内容3} \\
+    \hline
+  \end{tabular}
+  \par}
+\end{table}
+\begin{figure}[htbp]
+  {
+  \centering
+  \rule{0.6\textwidth}{30mm}
+  \par}
+  \caption[图片说明文字]{\protect\centering {\songti \fontsize{10.5pt}{12.6pt}\selectfont 图片说明文字}}
+  \label{fig:test}
+\end{figure}
+\end{document}

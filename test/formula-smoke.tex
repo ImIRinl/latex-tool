@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\begin{document}
+Inline variable: \({\fontsize{12pt}{14.4pt}\selectfont m}\).
+
+\vspace{0.5\baselineskip}
+\refstepcounter{equation}
+\begin{equation*}
+  {\fontsize{12pt}{14.4pt}\selectfont \frac{mv^2}{2}}
+  \tag*{{\fontsize{10.5pt}{12.6pt}\selectfont (\theequation)}}
+  \label{eq:kinetic-energy}
+\end{equation*}
+\vspace{0.5\baselineskip}
+
+\begin{equation*}
+  {\fontsize{12pt}{14.4pt}\selectfont \begin{bmatrix}a & b \\ c & d\end{bmatrix}}
+  \tag*{{\fontsize{10.5pt}{12.6pt}\selectfont [1-1]}}
+  \label{eq:matrix}
+\end{equation*}
+
+Reference: Equation~\ref{eq:kinetic-energy}.
+\end{document}

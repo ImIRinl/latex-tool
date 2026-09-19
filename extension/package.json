@@ -1,0 +1,105 @@
+{
+  "name": "latex-format-palette",
+  "displayName": "LaTeX 格式面板",
+  "description": "像 Word 格式面板一样管理 LaTeX 格式，点击即可在光标处插入。",
+  "version": "2.0.2",
+  "publisher": "local-tools",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Other",
+    "Snippets"
+  ],
+  "keywords": [
+    "latex",
+    "format",
+    "snippet",
+    "中文论文"
+  ],
+  "activationEvents": [
+    "onView:latexFormatPalette.main",
+    "onCommand:latexFormatPalette.editCurrentProperties",
+    "onCommand:latexFormatPalette.editImageProperties",
+    "onCommand:latexFormatPalette.showHelp",
+    "onCommand:latexFormatPalette.importPresets",
+    "onCommand:latexFormatPalette.exportPresets",
+    "onCommand:latexFormatPalette.openFormula",
+    "onCommand:latexFormatPalette.openDocumentTool",
+    "onCommand:latexFormatPalette.checkDocument",
+    "onWebviewPanel:latexFormatPalette.formula",
+    "onWebviewPanel:latexFormatPalette.document"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "latexFormatPalette.focus",
+        "title": "LaTeX 格式面板：打开格式面板"
+      },
+      {
+        "command": "latexFormatPalette.openFormula",
+        "title": "LaTeX 格式面板：打开公式工具"
+      },
+      {
+        "command": "latexFormatPalette.openDocumentTool",
+        "title": "LaTeX 格式面板：打开文档工具"
+      },
+      {
+        "command": "latexFormatPalette.checkDocument",
+        "title": "LaTeX 格式面板：检查当前文档"
+      },
+      {
+        "command": "latexFormatPalette.showHelp",
+        "title": "LaTeX 格式面板：查看使用教程"
+      },
+      {
+        "command": "latexFormatPalette.importPresets",
+        "title": "LaTeX 格式面板：导入格式包"
+      },
+      {
+        "command": "latexFormatPalette.exportPresets",
+        "title": "LaTeX 格式面板：导出格式包"
+      },
+      {
+        "command": "latexFormatPalette.editImageProperties",
+        "title": "LaTeX 格式面板：修改图片属性"
+      },
+      {
+        "command": "latexFormatPalette.editCurrentProperties",
+        "title": "LaTeX 格式面板：修改当前对象属性"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "latexFormatPalette.editCurrentProperties",
+          "when": "editorLangId == latex",
+          "group": "latexFormatPalette@1"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "latexFormatPalette",
+          "title": "LaTeX 格式面板",
+          "icon": "media/activity-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "latexFormatPalette": [
+        {
+          "type": "webview",
+          "id": "latexFormatPalette.main",
+          "name": "我的格式"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "test": "node test/run-tests.js"
+  }
+}

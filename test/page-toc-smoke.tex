@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{tocloft}
+\usepackage{fancyhdr}
+\makeatletter
+\title{Page setup test}
+\setlength{\headheight}{15pt}
+\setlength{\headsep}{8mm}
+\setlength{\footskip}{10mm}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{{\fontsize{10.5pt}{12.6pt}\selectfont \@title}}
+\fancyfoot[L]{{\fontsize{10.5pt}{12.6pt}\selectfont Example University}}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\AtBeginDocument{\pagestyle{fancy}}
+\AtBeginDocument{\thispagestyle{empty}}
+\AtBeginDocument{\pagenumbering{arabic}\setcounter{page}{1}}
+\makeatother
+\begin{document}
+\maketitle
+\clearpage
+\begingroup
+\setcounter{tocdepth}{3}
+\renewcommand{\contentsname}{Contents}
+\renewcommand{\cfttoctitlefont}{\hfill \fontsize{16pt}{19.2pt}\selectfont \bfseries }
+\renewcommand{\cftaftertoctitle}{ \hfill}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsubsecleader}{\cftdotfill{\cftdotsep}}
+\tableofcontents
+\endgroup
+\clearpage
+\section{Introduction}
+Body text.
+\subsection{Background}
+Secondary content.
+\subsubsection{Research question}
+Third-level content.
+\end{document}

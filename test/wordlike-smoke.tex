@@ -1,0 +1,45 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\begin{document}
+\section{导航测试}
+
+% LFP:paragraph:start test
+{
+\widowpenalty=10000
+\clubpenalty=10000
+\vspace{1\baselineskip}
+\songti
+\fontsize{12pt}{18pt}\selectfont
+\setlength{\parindent}{2em}
+这是一个使用中文字号、行距、段前段后和分页控制的测试段落。
+\par
+\vspace{0.5\baselineskip}
+}
+\nopagebreak[4]
+% LFP:paragraph:end
+
+\begin{figure}[htbp]
+  \centering
+  \rule{0.6\textwidth}{30mm}
+  \caption[系统结构]{\protect\centering {\fontsize{10.5pt}{12.6pt}\selectfont 系统结构}}
+  \label{fig:system}
+\end{figure}
+
+\begin{table}[htbp]
+  \caption[结果对比]{\protect\centering {\fontsize{10.5pt}{12.6pt}\selectfont 结果对比}}
+  \label{tab:results}
+  {
+  \centering
+  \begin{tabular*}{0.8\textwidth}{@{\extracolsep{\fill}}cc}
+    \toprule
+    \multicolumn{1}{c}{{\heiti \fontsize{10.5pt}{12.6pt}\selectfont \bfseries 项目}} & \multicolumn{1}{c}{{\heiti \fontsize{10.5pt}{12.6pt}\selectfont \bfseries 数值}} \\
+    \midrule
+    {\fontsize{10.5pt}{12.6pt}\selectfont A} & {\fontsize{10.5pt}{12.6pt}\selectfont 95\%} \\
+    \bottomrule
+  \end{tabular*}
+  \par}
+\end{table}
+
+引用图~\ref{fig:system}和表~\ref{tab:results}。
+\end{document}

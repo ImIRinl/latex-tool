@@ -1,0 +1,13 @@
+# 构建过程产生的目录
+build-*/
+.build*/
+
+# 只把当前版本的发布文件作为源码仓库中的可下载附件，其余历史产物忽略
+dist/*
+!dist/latex-format-palette.vsix
+!dist/LaTeX格式面板-便携安装包-v2.0.2.zip
+
+# 本地编辑器和系统文件
+.vscode/
+Thumbs.db
+*.log
